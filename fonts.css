@@ -1,0 +1,12 @@
+/* Polices intégrées à l'appli : le téléphone n'utilise jamais sa police arabe par défaut
+   (Geeza Pro sur iPhone place les harakat loin des lettres). */
+@font-face { font-family: 'ZadSch'; font-weight: 400; font-display: block; src: url(scheherazade-new-arabic-400-normal.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC; }
+@font-face { font-family: 'ZadSch'; font-weight: 700; font-display: block; src: url(scheherazade-new-arabic-700-normal.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC; }
+@font-face { font-family: 'ZadSch'; font-weight: 400 700; font-display: block; src: url(scheherazade-new-latin-400-normal.woff2) format('woff2'); unicode-range: U+0020-002F, U+003A-003F, U+005B-005F, U+00A0, U+00AB, U+00BB, U+2013-2014; }
+@font-face { font-family: 'ZadNaskh'; font-weight: 400; font-display: block; src: url(noto-naskh-arabic-arabic-400-normal.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC; }
+@font-face { font-family: 'ZadNaskh'; font-weight: 700; font-display: block; src: url(noto-naskh-arabic-arabic-700-normal.woff2) format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC; }
+@font-face { font-family: 'ZadNaskh'; font-weight: 400 700; font-display: block; src: url(noto-naskh-arabic-latin-400-normal.woff2) format('woff2'); unicode-range: U+0020-002F, U+003A-003F, U+005B-005F, U+00A0, U+00AB, U+00BB, U+2013-2014; }
+@font-face { font-family: 'Figtree'; font-weight: 400; font-display: swap; src: url(figtree-latin-400-normal.woff2) format('woff2'); }
+@font-face { font-family: 'Figtree'; font-weight: 500; font-display: swap; src: url(figtree-latin-500-normal.woff2) format('woff2'); }
+@font-face { font-family: 'Figtree'; font-weight: 600; font-display: swap; src: url(figtree-latin-600-normal.woff2) format('woff2'); }
+@font-face { font-family: 'Figtree'; font-weight: 700; font-display: swap; src: url(figtree-latin-700-normal.woff2) format('woff2'); }
