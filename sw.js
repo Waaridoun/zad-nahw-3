@@ -1,5 +1,5 @@
 /* Zād an-Nahw : mode hors ligne. Changer VERSION à chaque mise à jour du site. */
-const VERSION = 'zad-1.0';
+const VERSION = 'zad-1.1';
 const FILES = [
   './', 'index.html', 'manifest.webmanifest', 'fonts.css', 'app.css', 'app.js',
   'catalogue.js', 'l02.js', 'l03.js', 'l05.js', 'l06.js', 'l07.js', 'l08.js', 'l09.js', 'l10.js', 'l11.js', 'l12.js', 'l13.js', 'l14.js', 'l15.js', 'l16.js',

@@ -346,7 +346,7 @@
           const r = ls.qa[k];
           const st = r === 1 ? '<span class="qs" style="color:var(--ok)">' + I.ok + '</span>' : r === 0 ? '<span class="qs" style="color:var(--train)">' + I.redo + '</span>' : '';
           return '<div class="card qa"><div class="qq"><span class="qn">' + (qi + 1) + '</span><div class="qt">' + fr(q.q) + '</div>' + st + '</div>' +
-            (open ? '<div class="ans">' + blocsH(L, p, q.a) + '</div><div class="rate"><button class="n' + (r === 0 ? ' on' : '') + '" data-act="rate" data-k="' + k + '" data-v="0">À revoir</button><button class="y' + (r === 1 ? ' on' : '') + '" data-act="rate" data-k="' + k + '" data-v="1">Je savais</button></div>'
+            (open ? '<div class="ans">' + blocsH(L, p, q.a) + '</div><div class="rate"><button class="n' + (r === 0 ? ' on' : '') + '" data-act="rate" data-k="' + k + '" data-v="0">À revoir</button><button class="y' + (r === 1 ? ' on' : '') + '" data-act="rate" data-k="' + k + '" data-v="1">Je savais</button></div><button class="btn ghost fiche rev" style="min-height:44px" data-act="reveal" data-k="' + k + '">Masquer la réponse</button>'
               : '<button class="btn ghost fiche rev" style="min-height:44px" data-act="reveal" data-k="' + k + '">Voir la réponse</button>') + '</div>';
         }).join('') + '</div>';
     }
@@ -682,7 +682,7 @@
     openPoint(el) { const id = cur().id; ficheState(id).p = +el.dataset.p; ficheState(id).mode = 'fiche'; go('lecon-' + slug(id) + '-fiche'); },
     ficheP(el) { const id = cur().id; ficheState(id).p = +el.dataset.p; V.scrollTop = true; render(); },
     ficheMode(el) { const id = cur().id; ficheState(id).mode = el.dataset.m; render(); },
-    reveal(el) { const id = cur().id; ficheState(id).open[el.dataset.k] = true; render(); },
+    reveal(el) { const id = cur().id, o = ficheState(id).open, k = el.dataset.k; o[k] = !o[k]; render(); },
     rate(el) { const id = cur().id; LS(id).qa[el.dataset.k] = +el.dataset.v; save(); render(); },
     corr(el) { const t = document.querySelector('[data-corr="' + el.dataset.k + '"]'); if (t) t.hidden = !t.hidden; },
     trainPoint(el) { const id = cur().id; const L = LES(id); const p = +el.dataset.p; startSession(id, L.exos.filter((e) => e.p === p), 'Point ' + p); },
